@@ -34,7 +34,7 @@ print(point1.geom_type)
 
 # YOUR CODE HERE 2 to define create_line_geom()
 def create_line_geom(points):
-   """
+  """
   parameter : points
   purpose   : create line
   """
@@ -156,7 +156,7 @@ except Exception as e:
 
 # YOUR CODE HERE 8 to define get_area()
 def get_area(polygon):
-   """
+  """
   parameter : polygon
   """
   assert type(geom)==Polygon, "Input should be a Shapely Polygon -object!"
@@ -188,7 +188,7 @@ except Exception as e:
 #  YOUR CODE HERE 9 to define get_length()
 def get_length(geom):
   assert type(geom)==LineString or type(geom)==Polygon, "'geom' should be either LineString or Polygon!"
-  return geom.
+  return geom.len
 # Test and demonstrate the usage of the function:
 
 get_length(poly1)
