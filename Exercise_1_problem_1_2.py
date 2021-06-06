@@ -12,6 +12,10 @@
 from shapely.geometry import Point, LineString, Polygon
 #YOUR CODE HERE 1 to define create_point_geom()
 def create_point_geom(x_coord, y_coord):
+  """
+  parameter : x,y
+  purpose   : create Point
+  """
   point = Point(x_coord,y_coord)
   return(point)
 # Test your function by running these code cells:
@@ -30,6 +34,10 @@ print(point1.geom_type)
 
 # YOUR CODE HERE 2 to define create_line_geom()
 def create_line_geom(points):
+   """
+  parameter : points
+  purpose   : create line
+  """
   assert type(points) == "Input should be a list!"
   assert len(points) >= 2,"LineString object requires at least two Points!"
   line = LineString([points[0],points[1]])
@@ -70,6 +78,10 @@ except Exception as e:
 
 # YOUR CODE HERE 4 to define create_poly_geom()
 def create_poly_geom(coords):
+  """
+  parameter : coords
+  purpose   : create Polygon
+  """
   assert type(coords) is list, "Input should be a list!"
   assert len(coords) >= 3,"Polygon object requires at least three Points!"
   for i in coords:
@@ -111,6 +123,10 @@ except Exception as e:
 
 #  YOUR CODE HERE 6 to define get_centroid()
 def get_centroid(geom):
+  """
+  parameter : geom
+  purpose   : create centroid
+  """
   assert type(geom)==Point or type(geom)==LineString or type(geom)==Polygon, "Input should be a Shapely geometry!"
   return geom.centroid
   # Test and demonstrate the usage of the function. You can, for example, create shapely objects using the functions you created in problem 1 and print out information about their centroids:
@@ -139,6 +155,12 @@ except Exception as e:
 #    - Inside the function, you should first check with `assert` -functionality that the input is a Shapely Polygon geometry (see [lesson 6](https://geo-python.github.io/site/lessons/L6/interpreting-errors.html#assertions) and [hints](https://automating-gis-processes.github.io/site/develop/lessons/L1/exercise-1.html#hints)). If something else than a list is passed for the function, you should return an Error message: `"Input should be a Shapely Polygon -object!"`
 
 # YOUR CODE HERE 8 to define get_area()
+def get_area(polygon):
+   """
+  parameter : polygon
+  """
+  assert type(geom)==Polygon, "Input should be a Shapely Polygon -object!"
+  return geom.area
 
 # Test and demonstrate the usage of the function:
 get_area(poly1)
@@ -164,7 +186,9 @@ except Exception as e:
 
 
 #  YOUR CODE HERE 9 to define get_length()
-
+def get_length(geom):
+  assert type(geom)==LineString or type(geom)==Polygon, "'geom' should be either LineString or Polygon!"
+  return geom.
 # Test and demonstrate the usage of the function:
 
 get_length(poly1)
