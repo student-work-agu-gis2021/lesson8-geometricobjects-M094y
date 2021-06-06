@@ -11,6 +11,7 @@
 # YOUR CODE HERE 1 to read the file
 #raise NotImplementedError()
 import pandas as pd 
+data = pd.read_txt(data/travelTimes_2015_Helsinki.txt)
 
 #Check how many rows and columns there are:
 data
@@ -25,7 +26,10 @@ print(data.head())
 # 
 
 # YOUR CODE HERE 2 to set `data`
-
+from_x
+from_y
+to_x
+to_y
 # CODE FOR TESTING YOUR SOLUTION
 print(list(data.columns))
 
